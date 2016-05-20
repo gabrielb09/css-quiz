@@ -1,0 +1,29 @@
+body {
+    background: #BC0000;
+    color: black;
+}
+
+.quiz__wrapper {
+    min-height: 100vh;
+}
+
+.quiz-item {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item div {
+    /*max-width: 80%*/
+    padding: 30px 120px 30px 120px;
+    margin: 30px;
+    background: yellow;
+}
+
+.item div.answer:hover {
+    box-shadow: 5px 5px 0px black;
+    transition: box-shadow 0.15s ease-out;
+}
+
