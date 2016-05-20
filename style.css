@@ -1,6 +1,8 @@
 body {
     background: #BC0000;
     color: black;
+    font-family: Open Sans;
+    font-size: 1.5em;
 }
 
 .quiz__wrapper {
@@ -22,8 +24,105 @@ body {
     background: yellow;
 }
 
-.item div.answer:hover {
+.item div.question {
+    margin: 30px 15px 30px 15px;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.item div.option:hover {
     box-shadow: 5px 5px 0px black;
     transition: box-shadow 0.15s ease-out;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+}
+
+.option.correct {
+
+}
+
+/* correct */
+/*@-webkit-keyframes check {
+0% {
+        height: 0;
+        width: 0;
+    }
+
+    33.3333% {
+        width: 40px;
+        height: 0;
+    }
+  
+}
+@-moz-keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    33.3333% {
+        width: 40px;
+        height: 0;
+    }
+}
+@-ms-keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    33.3333% {
+        width: 40px;
+        height: 0;
+    }
+}*/
+@keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    33.3333% {
+        width: 30%;
+        height: 0;
+    }
+}
+
+
+/*.correct {
+    display: block;
+    height: 50px;
+    position: relative;
+    width: 50px;
+}*/
+
+
+.correct:after {
+    -webkit-animation: check .8s;
+    -moz-animation: check .8s ;
+    -o-animation: check .8s;
+    animation: check .8s;
+}
+
+.correct:after {
+    -moz-transform: scaleX(-1) rotate(135deg);
+    -ms-transform: scaleX(-1) rotate(135deg);
+    -webkit-transform: scaleX(-1) rotate(135deg);
+    transform: scaleX(-1) rotate(135deg);
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-right: 10px solid #90ABD6;
+    border-top: 10px solid #90ABD6;
+    content: '';
+    height: 80px;
+    left: 14px;
+    position: relative;
+    top: 100px;
+    width: 40px;
 }
 
