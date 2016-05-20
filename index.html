@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="test.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
@@ -19,22 +19,46 @@
 <body>
   <div class="quiz__wrapper">
     <section class="quiz-item" id="question1">
-      <div class="item">
-        <div class="question">Question 1</div>
-        <a href="#question2"><div class="option answer correct">Option 1</div></a>
-        <a href="#question2"><div class="option">Option 2</div></a>
-        <a href="#question2"><div class="option">Option 3</div></a>
-        <a href="#question2"><div class="option">Option 4</div></a>
+      <div class="question__wrapper">
+        <div class="item question">Question 1</div>
+        <div class="item">
+          <a href="#question2" class="option answer">Option 1</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#question2" class="option">Option 2</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#question2" class="option">Option 3</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#question2" class="option">Option 4</a>
+          <div class="response"></div>
+        </div>
       </div>
     </section>
 
     <section class="quiz-item" id="question2">
-      <div class="item">
-        <div class="question">Question 2</div>
-        <a href="#end"><div class="option">Option 1</div></a>
-        <a href="#end"><div class="option answer">Option 2</div></a>
-        <a href="#end"><div class="option">Option 3</div></a>
-        <a href="#end"><div class="option">Option 4</div></a>
+      <div class="question__wrapper">
+        <div class="item question">Question 2</div>
+        <div class="item">
+          <a href="#end" class="option">Option 1</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#end" class="option answer">Option 2</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#end" class="option">Option 3</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#end" class="option">Option 4</a>
+          <div class="response"></div>
+        </div>
       </div>
     </section>
 

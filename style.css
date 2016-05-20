@@ -17,31 +17,35 @@ body {
     justify-content: center;
 }
 
-.item div {
+.item {
     /*max-width: 80%*/
     padding: 30px 120px 30px 120px;
     margin: 30px;
     background: yellow;
 }
 
-.item div.question {
+/*.item div.question {
     margin: 30px 15px 30px 15px;
     font-weight: 500;
     font-size: 2em;
+}*/
+
+.item a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
 }
 
+.item div.option {
+    float: left;
+}
 .item div.option:hover {
     box-shadow: 5px 5px 0px black;
     transition: box-shadow 0.15s ease-out;
 }
 
-.item a {
-    text-decoration: none;
-    color: black;
-}
-
-.option.correct {
-
+.item div.response {
+    float: right;
 }
 
 /* correct */
@@ -100,7 +104,7 @@ body {
 }*/
 
 
-.correct:after {
+/*.correct:after {
     -webkit-animation: check .8s;
     -moz-animation: check .8s ;
     -o-animation: check .8s;
@@ -124,5 +128,5 @@ body {
     position: relative;
     top: 100px;
     width: 40px;
-}
+}*/
 
