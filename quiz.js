@@ -1,6 +1,14 @@
+var correct = 0;
 
 $(document).ready(function() {
   var answers = new Array();
+
+  // hide all the endings
+  $.each($(".ending"), function(index, item) {
+    $(item).css("visibility", "hidden");
+  });
+
+  $("#no-ending").css("visibility", "visible");
 
   // click listener
   $(".item a").click(function() {
@@ -25,11 +33,13 @@ $(document).ready(function() {
       if ($(child).hasClass("choice")) {
         // answers.push(i)
         addAnswer(i, answers);
+        correct ++;
         return;
       }
     });
 
     console.log(answers);
+    console.log(correct);
 
   });
 });
@@ -38,9 +48,20 @@ function addAnswer(index, array) {
   array.push(index);
 
   if (array.length == 2) {
-    console.log("uh-oh");
-    if (areArraysEqual(array, [1,2])) {
-      console.log("your great!");
+    // console.log("uh-oh");
+    // if (areArraysEqual(array, [1,2])) {
+    //   console.log("your great!");
+    // }
+    if (array.length >= 2) {
+      console.log("halleluah");
+      $("#no-ending").css("visibility", "hidden");
+      if (correct >= 14) {
+        $("#ending1").css("visibility", "visible");
+      } else if (correct >= 8 && correct <14) {
+        $("#ending2").css("visibility", "visible");
+      } else if (correct < 8) {
+        $("#ending3").css("visibility", "visible");
+     }
     }
   }
 }

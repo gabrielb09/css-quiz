@@ -26,13 +26,13 @@ body {
     color: black;
 }
 
-.question_wrapper {
-    display: flex;
+.question__wrapper {
+    width: 70%s;
 }
 
 .question__wrapper .item {
     position: relative;
-    background: yellow;
+    background: #FFC600;
     margin: 1em;
     padding: 1.4em 4.4em;
 }
