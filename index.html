@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Quiz</title>
+  <link rel="stylesheet" href="test.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+  <script src="smooth-scroll.js"></script>
+  <script src="quiz.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="quiz__wrapper">
+    <section class="quiz-item" id="question1">
+      <div class="question__wrapper">
+        <div class="item question">
+          Pushed to the ground and kicked by a gang of soldiers, about to be shot, you can save your life by brandishing:
+        </div>
+        <div class="item">
+          <a href="#question2" class="option answer">Option 1</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#question2" class="option">Option 2</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#question2" class="option">Option 3</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#question2" class="option">Option 4</a>
+          <div class="response"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-item" id="question2">
+      <div class="question__wrapper">
+        <div class="item question">Question 2</div>
+        <div class="item">
+          <a href="#end" class="option">Option 1</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#end" class="option answer">Option 2</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#end" class="option">Option 3</a>
+          <div class="response"></div>
+        </div>
+        <div class="item">
+          <a href="#end" class="option">Option 4</a>
+          <div class="response"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-item" id="end">
+      <div class="end">
+        <div class="ending" id="no-ending">You Haven't Completed the Quiz Yet!</div>
+        <div class="ending" id="ending1">
+          You’re a well adjusted person, a home-owner, with and income of at least $50,000 a year.
+        </div>
+        <div class="ending" id="ending2">
+          You either rent or live with your parents, never exercise, and consume at least a 6-pack a day.
+        </div>
+        <div class="ending" id="ending3">
+          You’re in trouble with the FBI and/or the IRS, cut your own hair, and use public transit as your primary mode of transportation.
+        </div>
+      </div>
+    </section>
+  </div>  
+</body>
