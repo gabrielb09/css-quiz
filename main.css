@@ -2,7 +2,8 @@ body {
     background: #BC0000;
     color: black;
     font-family: Open Sans;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .quiz-item {
@@ -38,7 +39,7 @@ body {
     position: relative;
     background: #FFC600;
     margin: 1em;
-    padding: 1.4em 4.4em;
+    padding: 1.3em 1.2em;
 }
 
 .question__wrapper .item a {
@@ -61,6 +62,29 @@ body {
     box-shadow: 5px 5px 0px black;
     transition: box-shadow 0.15s ease-out;
 }
+
+.end {
+    background: #FFC600;
+    margin: 1em;
+    padding: 1.4em 4.4em;
+}
+
+.ending-none:after {
+    content: "You Haven't Completed the Quiz Yet!";
+}
+
+.ending-one:after {
+    content: "You’re a well adjusted person, a home-owner, with and income of at least $50,000 a year.";
+}
+
+.ending-two:after {
+    content: "You either rent or live with your parents, never exercise, and consume at least a 6-pack a day.";
+}
+
+.ending-three:after {
+    content: "You’re in trouble with the FBI and/or the IRS, cut your own hair, and use public transit as your primary mode of transportation.";
+}
+
 
 /* Animations */
 @keyframes check {

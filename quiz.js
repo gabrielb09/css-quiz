@@ -3,12 +3,7 @@ var total = 0;
 
 $(document).ready(function() {
 
-  // hide all the endings
-  $.each($(".ending"), function(index, item) {
-    $(item).css("visibility", "hidden");
-  });
-
-  $("#no-ending").css("visibility", "visible");
+  $(".ending").addClass("ending-none");
 
   // click listener
   $(".item a").click(function() {
@@ -34,14 +29,15 @@ $(document).ready(function() {
     // figure out what option was clicked
     var children = $(this).parent().parent().children();
 
-    total ++;
     $.each(children, function(i, child) {
       $(child).addClass("old");
       if ($(child).hasClass("choice") && $(child).children("a").hasClass("answer")) {
-        addCorrect();
+        correct ++;
         return;
       }
     });
+
+    addTotal();
 
     console.log("Total: " + total);
     console.log("Correct: " + correct);
@@ -49,19 +45,18 @@ $(document).ready(function() {
   });
 });
 
-function addCorrect() {
-  correct ++;
-  console.log("hi");
+function addTotal() {
+  total ++;
 
   if (total >= 19) {
     console.log("halleluah");
-    $("#no-ending").css("visibility", "hidden");
+    $(".ending").removeClass("ending-none");
     if (correct >= 14) {
-      $("#ending1").css("visibility", "visible");
-    } else if (correct >= 8 && correct <14) {
-      $("#ending2").css("visibility", "visible");
+      $(".ending").addClass("ending-one");
+    } else if (correct >= 8 && correct < 14) {
+      $(".ending").addClass("ending-two");
     } else if (correct < 8) {
-      $("#ending3").css("visibility", "visible");
+      $(".ending").addClass("ending-three");
     }
   }
 }
